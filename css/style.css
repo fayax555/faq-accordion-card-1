@@ -33,6 +33,7 @@ body {
     var(--color-gradient-violet),
     var(--color-gradient-blue)
   );
+  position: relative;
 }
 
 h1 {
@@ -57,14 +58,35 @@ p {
 .card {
   background: white;
   width: 90%;
-  margin: 0 auto;
+  margin: 15rem auto;
   padding: 0 2.3rem 4rem;
   border-radius: 15px;
   text-align: center;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  height: 50%;
+  background-color: pink;
+  z-index: -1;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  border-radius: 15px;
+  bottom: 0;
+  box-shadow: 0 15px 30px 4px #4b4bc7;
 }
 
 .card__title {
   margin: 2rem 0;
+}
+
+/* Card Images Group */
+.img-actual {
+  width: 240px;
+  position: absolute;
+  top: -110px;
 }
 
 /* Collapsible */
@@ -77,6 +99,15 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.collapsible__title {
+  cursor: pointer;
+  transition: color 0.1s ease-out;
+}
+
+.collapsible__title:hover {
+  color: var(--color-accent);
 }
 
 .collapsible__content {
@@ -109,7 +140,10 @@ p {
 .attribution {
   color: white;
   font-size: 11px;
+  width: 100%;
   text-align: center;
+  position: absolute;
+  bottom: 4px;
 }
 .attribution a {
   color: white;
