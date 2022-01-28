@@ -97,7 +97,8 @@ p {
 }
 
 .img-actual--desktop,
-.img-shadow--desktop {
+.img-shadow--desktop,
+.img-box--desktop {
   max-height: 0;
 }
 
@@ -192,6 +193,17 @@ p {
     overflow: hidden;
   }
 
+  /* .card__images::after {
+    content: "";
+    background: url(../images/illustration-box-desktop.svg);
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    left: -11rem;
+    top: 18rem;
+  } */
+
   .card__images > * {
     position: absolute;
     right: 8rem;
@@ -205,13 +217,19 @@ p {
     bottom: -40%;
   }
 
+  .img-box--desktop {
+    top: 17rem;
+    left: -10rem;
+  }
+
   .img-actual--mobile,
   .img-shadow--mobile {
     max-height: 0;
   }
 
   .img-actual--desktop,
-  .img-shadow--desktop {
+  .img-shadow--desktop,
+  .img-box--desktop {
     max-height: 100vh;
   }
 
