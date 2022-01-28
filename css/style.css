@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+  font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
   font-size: var(--fs-400);
   min-height: 100vh;
   background: linear-gradient(
@@ -69,7 +69,7 @@ p {
 }
 
 .card::after {
-  content: "";
+  content: '';
   height: 50%;
   background-color: pink;
   z-index: -1;
@@ -171,7 +171,12 @@ p {
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    margin: auto;
+  }
+
   .card {
+    width: 100%;
     margin: 0 auto;
     max-width: 920px;
     padding: 0;
@@ -218,8 +223,9 @@ p {
   }
 
   .img-box--desktop {
-    top: 17rem;
-    left: -10rem;
+    position: absolute;
+    transform: translate(-100px, 170px);
+    z-index: 1;
   }
 
   .img-actual--mobile,
